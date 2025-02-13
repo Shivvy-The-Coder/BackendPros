@@ -11,7 +11,7 @@ if (!fs.existsSync(datafolder)) {
   //checking id the foldername data exist inside of the folder or not
   fs.mkdirSync(datafolder); //if not than create a new folder and join it ith the current directory
   console.log("data folder has been created"); //message that file has been created
-} else console.log(datafolder); //of the folder already existed then simple print its directory path
+} else console.log(datafolder); //of the folder a lready existed then simple print its directory path
 
 const filepath = path.join(datafolder, "example.txt");
 fs.writeFileSync(filepath, "hello from node js");
