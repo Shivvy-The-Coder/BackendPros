@@ -1,0 +1,16 @@
+{
+  "name": "3.node-package_manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js "
+  },
+  "keywords": [],
+  "author": "Shivam Das",
+  "license": "ISC",
+  "description": "this is a node package_manager practice project",
+  "dependencies": {
+    "loadsh": "^0.0.4"
+  }
+}
