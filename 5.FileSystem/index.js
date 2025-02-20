@@ -18,6 +18,12 @@ const filepath = path.join(datafolder, "example.txt");
 // this is synchronous 
 
 // now to wrote inside of the file we need to use writefileSync with the filepath that ha sbeen joined earlier
+// for writing in a file we use writeFileSync
 fs.writeFileSync(filepath, 'Hello from node js');
-console.log("file has been created succesfully");
+    console.log("file has been created succesfully");
+
+
+// now for reading gthe file we need to use readFileSync
+const readfile =fs.readFileSync(filepath,"utf8");
+console.log(readfile);
 
