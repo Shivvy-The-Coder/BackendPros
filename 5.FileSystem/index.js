@@ -28,3 +28,29 @@ fs.appendFileSync(filepath, "\n next line has been added to prexisiting file");
 console.log("new file contnet added")
 
 console.log(fs.readFileSync(filepath,'utf8'))
+
+
+
+
+// below here we are now going to use async mwthods
+
+const asyncFilePath = path.join(datafolder, "asyncExample.txt");
+fs.writeFile(asyncFilePath, "hello Async node js ", (err)=>{
+    if(err)
+        throw err;
+    console.log("Async file has been created succesfully");
+})
+
+
+fs.appendFile(asyncFilePath, "\n next line to the file has been added",(err)=>{
+    if(err)throw err;
+    console.log("\n new line ha been added")
+})
+
+fs.readFile(asyncFilePath,"utf8",(err,data)=>{
+    if(err)
+        throw err
+    console.log("File contents:\n", data);
+}
+
+);
