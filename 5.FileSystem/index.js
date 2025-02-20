@@ -24,6 +24,7 @@ fs.writeFileSync(filepath, 'Hello from node js');
 
 
 // now for reading gthe file we need to use readFileSync
-const readfile =fs.readFileSync(filepath,"utf8");
-console.log(readfile);
+fs.appendFileSync(filepath, "\n next line has been added to prexisiting file");
+console.log("new file contnet added")
 
+console.log(fs.readFileSync(filepath,'utf8'))
