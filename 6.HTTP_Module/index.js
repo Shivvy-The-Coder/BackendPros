@@ -6,7 +6,12 @@ const http = require("http")
 // sending data from server to client
 const server = http.createServer((req,res)=>{
     console.log(req,'req');
-    res.writeHead(200, {'content-Type':'text-plain'});
+
+    //   here we are setting up the type of contemt we are trying to run up
+    // here 200 mwans the request was succesfull
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+
+    // what data we are sending the message as string from the server to client page
     res.end("hello Node js from http module");
 });
 
