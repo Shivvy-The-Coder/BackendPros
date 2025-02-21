@@ -9,8 +9,14 @@ const server = http.createServer((req,res)=>{
 
     // stating if we are in the page 3000/ then do this
     if(url === '/')
-        res.writeHead(200, {"content-Type":"text/plain"});
-        res.end("HOMEPAGE");
+        {res.writeHead(200, {"content-Type":"text/plain"});
+        res.end("HOMEPAGE");}
+    else if(url === '/projects')
+        {res.writeHead(200, {"content-Type":"text/plain"});
+        res.end("We are int he project page");}
+    else
+        {res.writeHead(404, {"content-Type":"text/plain"});
+        res.end("Page not found");}
 })
 
 const port = 3000;
