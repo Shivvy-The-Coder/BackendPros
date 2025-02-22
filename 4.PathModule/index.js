@@ -2,9 +2,6 @@
 console.log(__filename)
 // this is how we locate the file name using __filename
 
-
-
-
 const { log } = require("console");
 // get the path module herer
 const path = require("path");
