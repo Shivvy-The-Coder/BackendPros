@@ -1,6 +1,6 @@
 // __filenem tells us he complete file path which we are currently using
 console.log(__filename)
-
+// this is how we locate the file name using __filename
 
 
 
