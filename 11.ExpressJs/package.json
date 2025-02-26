@@ -8,5 +8,8 @@
   "keywords": [],
   "author": "Shivam das",
   "license": "ISC",
-  "description": "Learning Express js"
+  "description": "Learning Express js",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
