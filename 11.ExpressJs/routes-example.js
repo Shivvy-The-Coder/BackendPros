@@ -31,7 +31,7 @@ app.get('/products',(req,res)=>{
 // get a single product, its a dynamic api route
 app.get("/products/:id",(req,res)=>{
     const productId = parseInt(req.params.id);
-    // here id should be same as the product/:id whoch has been mentioned earlier
+    // here id should be same as the product/:id whoch has been mentioned earlie r
 
     const products=[
         {
