@@ -6,7 +6,7 @@ app.get('/',(req,res)=>{
     res.send("hellow World");
 })
 app.get('/Apps',(req,res)=>{
-    res.send("hellow to the Apps Section");
+    res.send("hellow to the Apps Section1");
 })
 
 const port = 3000;
