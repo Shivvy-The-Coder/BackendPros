@@ -9,7 +9,13 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-
+function generateName ()
+{
+  var nn = Math.floor(Math.random()*1347);
+  var vb = Math.floor(Math.random()*4308);
+  var bandName = noun[nn]+" "+adj[vb];
+  return bandName; 
+}
 app.post("/submit", (req, res) => {
   //Step 2 - Make the generate name functionality work
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
@@ -18,6 +24,11 @@ app.post("/submit", (req, res) => {
   //scroll down to see the two arrays.
   //2. Send the index.ejs as a response and add the adjective and noun to the res.render
   //3. Test to make sure that the random words display in the h1 element in index.ejs
+  const nam = generateName();
+  console.log(nam);
+  res.render("index.ejs",{
+    name:nam
+  })
 });
 
 app.listen(port, () => {
@@ -5684,14 +5695,3 @@ const noun = [
   "zoot-suit",
   "zucchini",
 ];
-function generateName ()
-{
-  var nn = Math.floor(Math.random()*1347);
-  var vb = Math.floor(Math.random()*4308);
-  var bandName = noun[nn]+" "+adj[vb];
-  return bandName; 
-}
-generateName();
-
-
-console.log(adj.length,noun.length);

@@ -5,6 +5,15 @@
     But when the user first goes on the website and there is no adjective and noun, 
     Show the default h1 below -->
 
+    <% if(locals.name) {%>
+     <h1><%=name%></h1> 
+      
+    <%}else{%>
+      <h1>WELCOME TO BAND GENERATOR</h1>
+    <% } %>
+
+
+</h1>
 <form action="/submit" method="POST">
   <input type="submit" value="Generate Name">
 </form>
