@@ -43,7 +43,7 @@ app.post("/", async (req, res) => {
   catch(error)
   {
     console.error(`NO MACTH FOUND`, error.message);
-    res.render("index.ejs",{error:"NO matcing activities"
+    res.render("index.ejs",{error:"NO matcing activitie s"
 
     });
   }
