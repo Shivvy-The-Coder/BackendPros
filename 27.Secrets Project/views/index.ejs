@@ -15,11 +15,20 @@
   <h1>What's your secret?</h1>
   <div class="card">
     <p>
+      <% if(locals.secret) {%>
       <%= secret %>
+      <% }else{ %>
+        <h1>No DATA</h1>
+        <% } %>
     </p>
   </div>
   <p class="user">
-    <%= user %>
+    <% if(locals.user) {%>
+      <%= user %>
+      <% }else{ %>
+        <h1>No DATA</h1>
+        <% } %>
+
   </p>
 </body>
 
