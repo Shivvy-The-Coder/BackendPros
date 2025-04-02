@@ -9,6 +9,16 @@
 <body>
     <h1>WELCOME TO WEATHER REPORT TERMINAL</h1>
 
+    <form id="forms" action="/weather" method="post">
+        <label for="">Country</label>
+        <input type="text" name="Country" id="">
+        <label for="">State</label>
+        <input type="text" name="state" id="">
+        <label for="">City</label>
+        <input type="text" name="city" id="">
+
+        <input type="submit" name="SUBMIT" id="">
+    </form>
     <h2>
         <%if(locals.data){  %>
         <%=data %>

@@ -11,6 +11,7 @@ const API_URL =`https://api.openweathermap.org/data/2.5/weather?lat=23.3721&lon=
 
 
 app.use(express.static('public'));
+app.use(body.urlencoded({extended:true}));
 
 app.get("/",async (req,res)=>{
     try{
@@ -24,6 +25,20 @@ app.get("/",async (req,res)=>{
     {
         console.error("Error :",error.message);
         res.sendStatus(404);
+    }
+})
+
+app.post("/weather",async(req,res)=>{
+    console.log(req.body);
+    const {country,state,city}=req.body;
+    console.log(country,state,city);
+    try
+    {
+        res.render("index.ejs");
+    }
+    catch(error)
+    {
+        
     }
 })
 
