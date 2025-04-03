@@ -27,18 +27,40 @@ app.get("/",async (req,res)=>{
         res.sendStatus(404);
     }
 })
+async function getLat (country, state,city)
+    {
+        try
+        {
+            const result = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${apiKey}`);
+            const response=result.data;
+            // console.log(respon se);
+            return response;
+        }
+        catch(error)
+            {
+                console.error("Wrong :", error.message);
+                return error.message;
+            }
+    }
+
 
 app.post("/weather",async(req,res)=>{
     console.log(req.body);
     const {country,state,city}=req.body;
-    console.log(country,state,city);
+
     try
     {
-        res.render("index.ejs");
+        const ans = await getLat(country,state,city);
+        console.log(ans);
+        const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${ans[0].lat}&lon=${ans[0].lon}&appid=${apiKey }`);
+        console.log(result.data);
+        res.render("index.ejs",{
+            data:result.data.weather[0].main,
+        });
     }
     catch(error)
     {
-        
+        console.error("MESSAGE :", error.message);
     }
 })
 
